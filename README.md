@@ -12,6 +12,10 @@
 
 [Clase Principal](https://github.com/victorManuelMarquez/cac-23651-ejercicios-java/blob/main/vial/src/main/java/ejecutable/TestApp.java)
 
+### Pokemon
+
+[Clase Principal](https://github.com/victorManuelMarquez/cac-23651-ejercicios-java/blob/main/pokemon/src/main/java/ejecutable/TestApp.java)
+
 ### Productos (Herencia y Polimorfismo)
 
 [Clase Principal](https://github.com/victorManuelMarquez/cac-23651-ejercicios-java/blob/main/productos/src/main/java/ejecutable/Distribuidora.java)
