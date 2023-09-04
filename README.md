@@ -8,6 +8,10 @@
 
 [Clase Principal](https://github.com/victorManuelMarquez/cac-23651-ejercicios-java/blob/main/mascota/src/main/java/ejecutable/TestApp.java)
 
+### Seguridad vial
+
+[Clase Principal](https://github.com/victorManuelMarquez/cac-23651-ejercicios-java/blob/main/vial/src/main/java/ejecutable/TestApp.java)
+
 ### Productos (Herencia y Polimorfismo)
 
 [Clase Principal](https://github.com/victorManuelMarquez/cac-23651-ejercicios-java/blob/main/productos/src/main/java/ejecutable/Distribuidora.java)
