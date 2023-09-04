@@ -1,0 +1,9 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="Pokemon" type="Application" factoryName="Application">
+    <option name="MAIN_CLASS_NAME" value="ejecutable.TestApp" />
+    <module name="pokemon" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>

@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/animales/animales.iml" filepath="$PROJECT_DIR$/animales/animales.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/cac-23651-ejercicios-java.iml" filepath="$PROJECT_DIR$/.idea/cac-23651-ejercicios-java.iml" />
       <module fileurl="file://$PROJECT_DIR$/mascota/mascota.iml" filepath="$PROJECT_DIR$/mascota/mascota.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pokemon/pokemon.iml" filepath="$PROJECT_DIR$/pokemon/pokemon.iml" />
       <module fileurl="file://$PROJECT_DIR$/productos/productos.iml" filepath="$PROJECT_DIR$/productos/productos.iml" />
       <module fileurl="file://$PROJECT_DIR$/vial/vial.iml" filepath="$PROJECT_DIR$/vial/vial.iml" />
     </modules>

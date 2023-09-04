@@ -8,8 +8,9 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="mascota" />
-        <module name="productos" />
         <module name="vial" />
+        <module name="pokemon" />
+        <module name="productos" />
       </profile>
     </annotationProcessing>
   </component>
