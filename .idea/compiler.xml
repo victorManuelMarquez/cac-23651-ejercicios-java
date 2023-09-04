@@ -9,6 +9,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="mascota" />
         <module name="productos" />
+        <module name="vial" />
       </profile>
     </annotationProcessing>
   </component>
