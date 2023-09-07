@@ -22,6 +22,10 @@
 
 ### Animales (Clase abstracta y interfaces)
 
-[Clase principal](https://github.com/victorManuelMarquez/cac-23651-ejercicios-java/blob/main/animales/src/ejecutable/Programa.java)
+[Clase Principal](https://github.com/victorManuelMarquez/cac-23651-ejercicios-java/blob/main/animales/src/ejecutable/Programa.java)
+
+### Lambdas (Supplier, Consumer, Function, etc.)
+
+[Clase principal](https://github.com/victorManuelMarquez/cac-23651-ejercicios-java/blob/main/lambdas/src/main/java/ejecutable/TestApp.java)
 
 ---
