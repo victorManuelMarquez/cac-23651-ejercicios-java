@@ -1,0 +1,9 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="Ordenamiento" type="Application" factoryName="Application">
+    <option name="MAIN_CLASS_NAME" value="main.DemoGenerico" />
+    <module name="genericos" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>

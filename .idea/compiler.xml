@@ -9,6 +9,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="mascota" />
         <module name="vial" />
+        <module name="lambdas" />
         <module name="pokemon" />
         <module name="productos" />
       </profile>
