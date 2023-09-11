@@ -14,5 +14,8 @@
         <module name="productos" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="avanzado" target="17" />
+    </bytecodeTargetLevel>
   </component>
 </project>
