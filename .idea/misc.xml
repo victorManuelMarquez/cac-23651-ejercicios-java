@@ -10,12 +10,8 @@
         <option value="$PROJECT_DIR$/pokemon/pom.xml" />
         <option value="$PROJECT_DIR$/lambdas/pom.xml" />
         <option value="$PROJECT_DIR$/avanzado/pom.xml" />
+        <option value="$PROJECT_DIR$/hola-mundo/pom.xml" />
       </list>
-    </option>
-    <option name="ignoredFiles">
-      <set>
-        <option value="$PROJECT_DIR$/avanzado/pom.xml" />
-      </set>
     </option>
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_17" default="true" project-jdk-name="17" project-jdk-type="JavaSDK">
