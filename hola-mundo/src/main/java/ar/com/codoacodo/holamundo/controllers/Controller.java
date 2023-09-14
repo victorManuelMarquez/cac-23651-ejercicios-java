@@ -9,7 +9,7 @@ public class Controller {
 
     @GetMapping(value = "mensaje")
     public String mensaje() {
-        return "¡¡¡Hola mundo!!!";
+        return "Controller dice: ¡¡¡Hola mundo!!!";
     }
 
 }
