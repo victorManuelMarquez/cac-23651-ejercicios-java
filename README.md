@@ -28,4 +28,12 @@
 
 [Clase principal](https://github.com/victorManuelMarquez/cac-23651-ejercicios-java/blob/main/lambdas/src/main/java/ejecutable/TestApp.java)
 
+### Spring Boot (Hola Mundo)
+
+[Clase Controller](https://github.com/victorManuelMarquez/cac-23651-ejercicios-java/blob/main/hola-mundo/src/main/java/ar/com/codoacodo/holamundo/controllers/Controller.java)
+
 ---
+
+Cosas que hice en mis ratos libres...
+
+Operaciones con streams de enteros (ordenar y filtrar), en swing: [Demo Lambdas](https://github.com/victorManuelMarquez/cac-23651-ejercicios-java/blob/main/avanzado/src/main/java/desktop/DemoLambdas.java)
