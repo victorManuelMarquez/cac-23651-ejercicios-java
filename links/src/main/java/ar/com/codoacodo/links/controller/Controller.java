@@ -12,7 +12,7 @@ public class Controller {
             @PathVariable(value = "nombre") String nombres,
             @PathVariable(value = "apellido") String apellidos
     ) {
-        return String.format("Los datos \"capturados\" son: %s %s.", nombres, apellidos);
+        return String.format("¡Bienvenido!: %s %s.", nombres, apellidos);
     }
 
 }
