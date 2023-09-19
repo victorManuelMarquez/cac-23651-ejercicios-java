@@ -12,6 +12,7 @@
         <module name="vial" />
         <module name="lambdas" />
         <module name="avanzado" />
+        <module name="links" />
         <module name="productos" />
         <module name="hola-mundo" />
       </profile>
@@ -20,6 +21,7 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="hola-mundo" options="-parameters" />
+      <module name="links" options="-parameters" />
     </option>
   </component>
 </project>
