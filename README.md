@@ -32,6 +32,10 @@
 
 [Clase Controller](https://github.com/victorManuelMarquez/cac-23651-ejercicios-java/blob/main/hola-mundo/src/main/java/ar/com/codoacodo/holamundo/controllers/Controller.java)
 
+### Spring Boot (URLs)
+
+[Clase Controller](links/src/main/java/ar/com/codoacodo/links/controller/Controller.java)
+
 ---
 
 Cosas que hice en mis ratos libres...
