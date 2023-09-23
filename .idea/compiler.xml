@@ -8,6 +8,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="pokemon" />
+        <module name="juego-medieval" />
         <module name="mascota" />
         <module name="vial" />
         <module name="lambdas" />
