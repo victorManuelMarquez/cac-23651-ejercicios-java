@@ -36,7 +36,7 @@
 
 [Clase Controller](links/src/main/java/ar/com/codoacodo/links/controller/Controller.java)
 
-### "Juego de Fantasia Medieval"
+### "Juego de Fantasía Medieval"
 
 [Clase Principal](juego-medieval/src/main/java/juego/PlayGame.java)
 
