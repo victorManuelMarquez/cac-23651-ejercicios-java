@@ -9,6 +9,7 @@ import lombok.*;
 @Data
 public class EntidadPersona {
 
+    private Integer id;
     private String nombre, apellido;
 
 }
