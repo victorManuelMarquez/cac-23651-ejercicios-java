@@ -40,7 +40,7 @@
 
 [Clase Principal](juego-medieval/src/main/java/juego/PlayGame.java)
 
-### Spring Boot - CRUD - Sin BD
+### Spring Boot - CRUD - Sin BD (Abarca el contenido de 2 clases)
 
 [Módulo](multicapa/src/main/java/ar/com/codoacodo/multicapa)
 
