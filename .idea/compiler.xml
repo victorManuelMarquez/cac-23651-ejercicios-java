@@ -14,6 +14,7 @@
         <module name="lambdas" />
         <module name="avanzado" />
         <module name="links" />
+        <module name="concesionaria" />
         <module name="productos" />
         <module name="hola-mundo" />
         <module name="multicapa" />
@@ -26,6 +27,7 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="concesionaria" options="-parameters" />
       <module name="concesionario" options="-parameters" />
       <module name="forms" options="-parameters" />
       <module name="hola-mundo" options="-parameters" />
