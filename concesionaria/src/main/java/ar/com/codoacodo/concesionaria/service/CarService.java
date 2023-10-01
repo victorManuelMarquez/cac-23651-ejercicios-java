@@ -1,20 +1,20 @@
 package ar.com.codoacodo.concesionaria.service;
 
-import ar.com.codoacodo.concesionaria.dto.CarDto;
+import ar.com.codoacodo.concesionaria.dto.CarServiceDto;
 
 import java.util.Date;
 import java.util.List;
 
 public interface CarService {
 
-    CarDto agregar(CarDto vehicle);
+    CarServiceDto agregar(CarServiceDto vehicle);
 
-    List<CarDto> listar();
+    List<CarServiceDto> listar();
 
-    List<CarDto> listarEntreFechas(Date inicio, Date fin);
+    List<CarServiceDto> listarEntreFechas(Date inicio, Date fin);
 
-    List<CarDto> listarEntrePrecios(Integer inicio, Integer fin);
+    List<CarServiceDto> listarEntrePrecios(Integer inicio, Integer fin);
 
-    CarDto buscar(Integer index);
+    CarServiceDto buscar(Integer index);
 
 }

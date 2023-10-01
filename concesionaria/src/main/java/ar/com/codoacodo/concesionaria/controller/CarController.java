@@ -2,6 +2,7 @@ package ar.com.codoacodo.concesionaria.controller;
 
 import ar.com.codoacodo.concesionaria.dto.CarDto;
 import ar.com.codoacodo.concesionaria.dto.CarServiceDto;
+import ar.com.codoacodo.concesionaria.dto.ServiceDto;
 import ar.com.codoacodo.concesionaria.service.CarServiceImpl;
 import lombok.AllArgsConstructor;
 import org.springframework.format.annotation.DateTimeFormat;
@@ -10,6 +11,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.*;
+import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("v1/api/vehicles")
@@ -20,29 +22,18 @@ public class CarController {
     private CarServiceImpl service;
 
     @PostMapping
-    public ResponseEntity<CarDto> addVehicle(@RequestBody CarDto vehicle) {
+    public ResponseEntity<CarDto> addVehicle(@RequestBody CarServiceDto vehicle) {
         return new ResponseEntity<>(service.agregar(vehicle), HttpStatus.CREATED);
     }
 
     @GetMapping
     public ResponseEntity<List<CarDto>> listVehicles() {
-        List<CarDto> copia = new ArrayList<>();
-        service.listar().forEach(dto -> copia.add(
-                new CarDto(
-                        dto.getBrand(),
-                        dto.getModel(),
-                        dto.getCurrency(),
-                        dto.getNumberOfKilometers(),
-                        dto.getDoors(),
-                        dto.getPrice(),
-                        dto.getCountOfOwners(),
-                        dto.getManufacturingDate(),
-                        Collections.emptyList())));
-        return new ResponseEntity<>(copia, HttpStatus.OK);
+        List<CarDto> lista = service.listar().stream().map(CarServiceDto::toCarDto).collect(Collectors.toList());
+        return new ResponseEntity<>(lista, HttpStatus.OK);
     }
 
     @GetMapping(value = "/dates")
-    public ResponseEntity<List<CarDto>> listByManufacturingDate(
+    public ResponseEntity<List<CarServiceDto>> listByManufacturingDate(
             @RequestParam @DateTimeFormat(pattern = "yyyy-MM-dd") Date since,
             @RequestParam @DateTimeFormat(pattern = "yyyy-MM-dd") Date to
     ) {
@@ -50,12 +41,12 @@ public class CarController {
     }
 
     @GetMapping(value = "/prices")
-    public ResponseEntity<List<CarDto>> listByPrices(@RequestParam Integer since, @RequestParam Integer to) {
+    public ResponseEntity<List<CarServiceDto>> listByPrices(@RequestParam Integer since, @RequestParam Integer to) {
         return new ResponseEntity<>(service.listarEntrePrecios(since, to), HttpStatus.OK);
     }
 
     @GetMapping(value = "/{id}")
-    public ResponseEntity<CarDto> details(@PathVariable("id") Integer index) {
+    public ResponseEntity<CarServiceDto> details(@PathVariable("id") Integer index) {
         return new ResponseEntity<>(service.buscar(index), HttpStatus.OK);
     }
 
@@ -82,15 +73,15 @@ public class CarController {
             String modelo = marcaModelos.get(marca).get(random.nextInt(modelBound));
             String currency = currencies[random.nextInt(currencies.length)];
             Date manufacturingDate = new GregorianCalendar(random.nextInt(2000, 2011), Calendar.JANUARY, 1).getTime();
-            List<CarServiceDto> services = new ArrayList<>();
+            List<ServiceDto> services = new ArrayList<>();
             for (int i=0; i<random.nextInt(5); i++) {
-                services.add(new CarServiceDto(
+                services.add(new ServiceDto(
                         new Date(),
                         random.nextInt(100000),
                         descriptions[random.nextInt(descriptions.length)]
                 ));
             }
-            service.agregar(new CarDto(
+            service.agregar(new CarServiceDto(
                     marca,
                     modelo,
                     currency,
