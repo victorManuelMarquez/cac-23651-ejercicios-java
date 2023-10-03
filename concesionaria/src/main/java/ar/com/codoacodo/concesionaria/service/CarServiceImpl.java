@@ -5,7 +5,7 @@ import ar.com.codoacodo.concesionaria.repository.CarRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
-import java.util.Date;
+import java.time.LocalDate;
 import java.util.List;
 import java.util.Optional;
 
@@ -26,7 +26,7 @@ public class CarServiceImpl implements CarService {
     }
 
     @Override
-    public List<CarServiceDto> listarEntreFechas(Date inicio, Date fin) {
+    public List<CarServiceDto> listarEntreFechas(LocalDate inicio, LocalDate fin) {
         return repository.listarPorFecha(inicio, fin);
     }
 

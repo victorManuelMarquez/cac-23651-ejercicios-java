@@ -4,7 +4,7 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
 
-import java.util.Date;
+import java.time.LocalDate;
 import java.util.List;
 
 @Setter
@@ -14,7 +14,17 @@ public class CarServiceDto extends CarDto {
     private List<ServiceDto> services;
 
     @Builder
-    public CarServiceDto(String brand, String model, String currency, Integer numberOfKilometers, Integer doors, Integer price, Integer countOfOwners, Date manufacturingDate, List<ServiceDto> services) {
+    public CarServiceDto(
+            String brand,
+            String model,
+            String currency,
+            Integer numberOfKilometers,
+            Integer doors,
+            Integer price,
+            Integer countOfOwners,
+            LocalDate manufacturingDate,
+            List<ServiceDto> services
+    ) {
         super(brand, model, currency, numberOfKilometers, doors, price, countOfOwners, manufacturingDate);
         this.services = services;
     }

@@ -2,7 +2,7 @@ package ar.com.codoacodo.concesionaria.service;
 
 import ar.com.codoacodo.concesionaria.dto.CarServiceDto;
 
-import java.util.Date;
+import java.time.LocalDate;
 import java.util.List;
 
 public interface CarService {
@@ -11,7 +11,7 @@ public interface CarService {
 
     List<CarServiceDto> listar();
 
-    List<CarServiceDto> listarEntreFechas(Date inicio, Date fin);
+    List<CarServiceDto> listarEntreFechas(LocalDate inicio, LocalDate fin);
 
     List<CarServiceDto> listarEntrePrecios(Integer inicio, Integer fin);
 

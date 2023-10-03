@@ -1,8 +1,10 @@
 package ar.com.codoacodo.concesionaria.dto;
 
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
-import java.util.Date;
+import java.time.LocalDate;
 
 @NoArgsConstructor
 @AllArgsConstructor
@@ -13,5 +15,6 @@ public class CarDto {
 
     private Integer numberOfKilometers, doors, price, countOfOwners;
 
-    private Date manufacturingDate;
+    private LocalDate manufacturingDate;
+
 }

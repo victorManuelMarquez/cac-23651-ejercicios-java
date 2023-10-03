@@ -10,7 +10,11 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.*;
+import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+import java.util.Random;
 import java.util.stream.Collectors;
 
 @RestController
@@ -34,8 +38,8 @@ public class CarController {
 
     @GetMapping(value = "/dates")
     public ResponseEntity<List<CarServiceDto>> listByManufacturingDate(
-            @RequestParam @DateTimeFormat(pattern = "yyyy-MM-dd") Date since,
-            @RequestParam @DateTimeFormat(pattern = "yyyy-MM-dd") Date to
+            @RequestParam @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate since,
+            @RequestParam @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate to
     ) {
         return new ResponseEntity<>(service.listarEntreFechas(since, to), HttpStatus.OK);
     }
@@ -59,24 +63,30 @@ public class CarController {
                 Map.entry("Toyota", List.of("Corolla", "4Runner", "Tacoma")),
                 Map.entry("Chevrolet", List.of("Silverado", "Impala", "Malibu", "Corsa"))
         );
-        String[] currencies = {"AR", "BZ", "EU", "US", "CL", "COL", "UY", "BV", "PE", "ECU"};
+        String[] currencies = {"ARS", "BOB", "BRL", "CLP", "COP", "USD", "GYD", "PYG", "PEN", "SRD", "UYU", "VES"};
         String[] descriptions = {
-                "Change air filters",
-                "Change the oil",
-                "Check air pressure",
-                "Change the brakes",
-                "Change oil filter"
+                "Oil Change",
+                "Tire Rotation",
+                "Brake Service",
+                "Wheel Alignment",
+                "Battery Replacement",
+                "Air Filter Replacement",
+                "Transmission Service",
+                "Coolant Flush",
+                "Spark Plug Replacement"
         };
         Random random = new Random();
         for (String marca : marcaModelos.keySet()) {
             int modelBound = marcaModelos.get(marca).size();
             String modelo = marcaModelos.get(marca).get(random.nextInt(modelBound));
             String currency = currencies[random.nextInt(currencies.length)];
-            Date manufacturingDate = new GregorianCalendar(random.nextInt(2000, 2011), Calendar.JANUARY, 1).getTime();
+            long inicio = LocalDate.of(2000, 1, 1).toEpochDay();
+            long fin = LocalDate.of(2010, 12, 12).toEpochDay();
+            LocalDate manufacturingDate = LocalDate.ofEpochDay(random.nextLong(inicio, fin));
             List<ServiceDto> services = new ArrayList<>();
             for (int i=0; i<random.nextInt(5); i++) {
                 services.add(new ServiceDto(
-                        new Date(),
+                        LocalDate.now(),
                         random.nextInt(100000),
                         descriptions[random.nextInt(descriptions.length)]
                 ));
@@ -87,7 +97,7 @@ public class CarController {
                     currency,
                     random.nextInt(200000), // km
                     random.nextInt(3, 6), // doors
-                    random.nextInt(50000, 1000000), // price
+                    random.nextInt(10000, 1000000), // price
                     random.nextInt(1, 3), // owners
                     manufacturingDate,
                     services

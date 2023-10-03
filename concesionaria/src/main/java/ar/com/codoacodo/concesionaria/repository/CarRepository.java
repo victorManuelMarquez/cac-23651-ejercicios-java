@@ -3,8 +3,8 @@ package ar.com.codoacodo.concesionaria.repository;
 import ar.com.codoacodo.concesionaria.dto.CarServiceDto;
 import org.springframework.stereotype.Repository;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 import java.util.function.Predicate;
@@ -25,8 +25,8 @@ public class CarRepository {
         return cars;
     }
 
-    public List<CarServiceDto> listarPorFecha(Date since, Date to) {
-        Predicate<CarServiceDto> rango = car -> car.getManufacturingDate().compareTo(since) >= 0 && car.getManufacturingDate().compareTo(to) <= 0;
+    public List<CarServiceDto> listarPorFecha(LocalDate since, LocalDate to) {
+        Predicate<CarServiceDto> rango = car -> car.getManufacturingDate().isAfter(since) && car.getManufacturingDate().isBefore(to);
         return cars.stream().filter(rango).collect(Collectors.toList());
     }
 

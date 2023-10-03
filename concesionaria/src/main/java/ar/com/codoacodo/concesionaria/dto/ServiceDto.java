@@ -2,7 +2,7 @@ package ar.com.codoacodo.concesionaria.dto;
 
 import lombok.*;
 
-import java.util.Date;
+import java.time.LocalDate;
 
 @Setter
 @Getter
@@ -11,7 +11,7 @@ import java.util.Date;
 @Data
 public class ServiceDto {
 
-    private Date date;
+    private LocalDate date;
 
     private Integer kilometers;
 
