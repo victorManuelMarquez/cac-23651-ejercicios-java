@@ -16,6 +16,7 @@
         <module name="links" />
         <module name="concesionaria" />
         <module name="productos" />
+        <module name="registro-civil" />
         <module name="hola-mundo" />
         <module name="multicapa" />
       </profile>
@@ -33,6 +34,7 @@
       <module name="hola-mundo" options="-parameters" />
       <module name="links" options="-parameters" />
       <module name="multicapa" options="-parameters" />
+      <module name="registro-civil" options="-parameters" />
     </option>
   </component>
 </project>
