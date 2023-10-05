@@ -52,6 +52,10 @@
 
 [Demostración en video](https://youtu.be/oAFK2dDeE40)
 
+### Spring Boot - Multicapa - Registro de personas (nuevos campos y requerimientos)
+
+[Módulo](registro-civil/src/main/java/ar/com/codoacodo/registrocivil)
+
 ---
 
 Cosas que hice en mis ratos libres...
