@@ -11,8 +11,9 @@
         <module name="juego-medieval" />
         <module name="mascota" />
         <module name="vial" />
-        <module name="lambdas" />
         <module name="avanzado" />
+        <module name="personas" />
+        <module name="lambdas" />
         <module name="links" />
         <module name="concesionaria" />
         <module name="productos" />
@@ -34,6 +35,7 @@
       <module name="hola-mundo" options="-parameters" />
       <module name="links" options="-parameters" />
       <module name="multicapa" options="-parameters" />
+      <module name="personas" options="-parameters" />
       <module name="registro-civil" options="-parameters" />
     </option>
   </component>
