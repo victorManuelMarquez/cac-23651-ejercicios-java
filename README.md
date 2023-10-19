@@ -56,8 +56,14 @@
 
 [Módulo](registro-civil/src/main/java/ar/com/codoacodo/registrocivil)
 
+### Spring Boot - Excepciones - Registro de personas (reinicio)
+
+[Módulo](personas/src/main/java/ar/com/codoacodo/personas)
+
 ---
 
 Cosas que hice en mis ratos libres...
 
-Operaciones con streams de enteros (ordenar y filtrar), en swing: [Demo Lambdas](https://github.com/victorManuelMarquez/cac-23651-ejercicios-java/blob/main/avanzado/src/main/java/desktop/DemoLambdas.java)
+Operaciones con streams de enteros (ordenar y filtrar), en swing: [Demo Lambdas](avanzado/src/main/java/desktop/DemoLambdas.java)
+
+Manejo de archivos de texto, en swing: [Demo archivos de texto](avanzado/src/main/java/desktop/DemoArchivos.java)
