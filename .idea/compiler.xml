@@ -12,6 +12,7 @@
         <module name="mascota" />
         <module name="vial" />
         <module name="avanzado" />
+        <module name="empleados" />
         <module name="personas" />
         <module name="lambdas" />
         <module name="links" />
@@ -31,6 +32,7 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="concesionaria" options="-parameters" />
       <module name="concesionario" options="-parameters" />
+      <module name="empleados" options="-parameters" />
       <module name="forms" options="-parameters" />
       <module name="hola-mundo" options="-parameters" />
       <module name="links" options="-parameters" />
