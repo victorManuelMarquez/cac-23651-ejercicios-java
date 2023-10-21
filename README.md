@@ -60,6 +60,10 @@
 
 [Módulo](personas/src/main/java/ar/com/codoacodo/personas)
 
+### Spring Boot - Validación - Registro de empleados
+
+[Módulo](empleados/src/main/java/ar/com/codoacodo/empleados)
+
 ---
 
 Cosas que hice en mis ratos libres...
