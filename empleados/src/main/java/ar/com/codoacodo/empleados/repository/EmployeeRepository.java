@@ -17,6 +17,7 @@ public class EmployeeRepository implements BasicRepository<Employee> {
 
     @Override
     public void add(Employee data) {
+        employees.forEach(e -> System.out.println(data + " === " + e.equals(data)));
         if (employees.stream().anyMatch(e -> e.equals(data)))
             throw new DuplicatedEmployeeException();
         data.setId(employees.isEmpty() ? 0 : employees.size() - 1);
