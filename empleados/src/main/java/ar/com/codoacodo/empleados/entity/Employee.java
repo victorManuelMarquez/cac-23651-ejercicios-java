@@ -1,9 +1,5 @@
 package ar.com.codoacodo.empleados.entity;
 
-import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.Past;
-import jakarta.validation.constraints.PositiveOrZero;
-import jakarta.validation.constraints.Size;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 
@@ -14,22 +10,8 @@ import java.util.Objects;
 @Data
 public class Employee {
 
-    @PositiveOrZero
     private Integer id;
-
-    @NotBlank
-    @Size(max = 9, message = "Dni demasiado largo.")
-    private String dni;
-
-    @NotBlank
-    @Size(max = 60, message = "El nombre es demasiado largo.")
-    private String nombre;
-
-    @NotBlank
-    @Size(max = 70, message = "El apellido es demasiado largo.")
-    private String apellido;
-
-    @Past
+    private String dni, nombre, apellido;
     private LocalDate fechaNac;
 
     @Override
