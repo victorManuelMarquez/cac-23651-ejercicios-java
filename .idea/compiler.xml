@@ -21,6 +21,7 @@
         <module name="registro-civil" />
         <module name="hola-mundo" />
         <module name="multicapa" />
+        <module name="personas-v2" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -38,6 +39,7 @@
       <module name="links" options="-parameters" />
       <module name="multicapa" options="-parameters" />
       <module name="personas" options="-parameters" />
+      <module name="personas-v2" options="-parameters" />
       <module name="registro-civil" options="-parameters" />
     </option>
   </component>
