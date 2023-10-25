@@ -64,6 +64,11 @@
 
 [Módulo](empleados/src/main/java/ar/com/codoacodo/empleados)
 
+### Spring Boot - Testing con JUnit 5 - Registro de personas (2do reinicio)
+
+[Main Module](personas-v2/src/main/java/ar/com/codoacodo/personasv2)
+[Test Module](personas-v2/src/test/java/ar/com/codoacodo/personasv2)
+
 ---
 
 Cosas que hice en mis ratos libres...
