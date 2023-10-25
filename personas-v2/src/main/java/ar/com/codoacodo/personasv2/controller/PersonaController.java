@@ -42,7 +42,7 @@ public class PersonaController {
     }
 
     @PostMapping("/actualizar")
-    public ResponseEntity<String> modificarRegistro(@RequestParam Integer id, @RequestBody PersonaDto dto) {
+    public ResponseEntity<String> modificarRegistro(@RequestParam Integer id, @Valid @RequestBody PersonaDto dto) {
         return new ResponseEntity<>(service.actualizarPersona(id, PersonaMapper.dtoAEntidad(dto)), HttpStatus.OK);
     }
 
