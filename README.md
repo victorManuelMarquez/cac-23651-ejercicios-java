@@ -69,6 +69,11 @@
 [Main Module](personas-v2/src/main/java/ar/com/codoacodo/personasv2)
 [Test Module](personas-v2/src/test/java/ar/com/codoacodo/personasv2)
 
+### Spring Boot - Testing - Personas (3er reinicio)
+
+[Main Module](personas-v3/src/main/java/ar/com/codoacodo/personasv3)
+[Test Module](personas-v3/src/test/java/ar/com/codoacodo/personasv3)
+
 ---
 
 Cosas que hice en mis ratos libres...
