@@ -4,6 +4,7 @@ import ar.com.codoacodo.personasv3.bean.Persona;
 import ar.com.codoacodo.personasv3.dto.PersonaDto;
 import ar.com.codoacodo.personasv3.service.PersonaService;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -27,9 +28,16 @@ public class PersonaController {
         return new ResponseEntity<>(stream.toList(), HttpStatus.OK);
     }
 
+    @GetMapping("legajo")
+    public ResponseEntity<PersonaDto> legajo(@RequestParam Integer nro) {
+        ObjectMapper mapper = new ObjectMapper();
+        return new ResponseEntity<>(mapper.convertValue(service.buscarPorId(nro), PersonaDto.class), HttpStatus.OK);
+    }
+
     @PostMapping("/agregar")
     public ResponseEntity<PersonaDto> agregar(@Valid @RequestBody PersonaDto dto) {
         ObjectMapper mapper = new ObjectMapper();
+        mapper.registerModule(new JavaTimeModule());
         Persona persona = mapper.convertValue(dto, Persona.class);
         return new ResponseEntity<>(mapper.convertValue(service.agregarPersona(persona), PersonaDto.class), HttpStatus.OK);
     }

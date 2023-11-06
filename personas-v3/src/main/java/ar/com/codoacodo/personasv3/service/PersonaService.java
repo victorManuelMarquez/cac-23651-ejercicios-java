@@ -17,6 +17,10 @@ public class PersonaService {
         return p;
     }
 
+    public Persona buscarPorId(Integer id) {
+        return personas.get(id);
+    }
+
     public List<Persona> listarPersonas() {
         return personas;
     }

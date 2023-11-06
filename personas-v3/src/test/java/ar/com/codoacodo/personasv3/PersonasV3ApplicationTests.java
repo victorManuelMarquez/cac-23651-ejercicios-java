@@ -1,25 +1,30 @@
 package ar.com.codoacodo.personasv3;
 
-import ar.com.codoacodo.personasv3.bean.Persona;
+import ar.com.codoacodo.personasv3.controller.PersonaController;
+import ar.com.codoacodo.personasv3.dto.PersonaDto;
 import ar.com.codoacodo.personasv3.factory.PersonaFactory;
-import ar.com.codoacodo.personasv3.service.PersonaService;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.mockito.Mock;
-import org.mockito.Mockito;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 
 @SpringBootTest
 class PersonasV3ApplicationTests {
 
-	@Mock
-	PersonaService service;
+	@Autowired
+	PersonaController controller;
 
 	@Test
-	void service_cuandoSeAgregaUnaPersona() {
-		// creo una persona
-		Persona persona = PersonaFactory.crearIndividuo();
-		// si se recibe un objeto "persona" deberá retornar el mismo.
-		Mockito.when(service.agregarPersona(Mockito.any(Persona.class))).thenReturn(persona);
+	void cuandoSeAgregaUnaPersona() {
+		ObjectMapper mapper = new ObjectMapper();
+		mapper.registerModule(new JavaTimeModule());
+		PersonaDto dto = mapper.convertValue(PersonaFactory.crearIndividuo(), PersonaDto.class);
+		ResponseEntity<PersonaDto> respuesta = controller.agregar(dto);
+        Assertions.assertSame(respuesta.getStatusCode(), HttpStatus.OK);
 	}
 
 }
