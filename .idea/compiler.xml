@@ -15,6 +15,7 @@
         <module name="empleados" />
         <module name="personas" />
         <module name="lambdas" />
+        <module name="personas-v4" />
         <module name="links" />
         <module name="concesionaria" />
         <module name="productos" />
@@ -42,6 +43,7 @@
       <module name="personas" options="-parameters" />
       <module name="personas-v2" options="-parameters" />
       <module name="personas-v3" options="-parameters" />
+      <module name="personas-v4" options="-parameters" />
       <module name="registro-civil" options="-parameters" />
     </option>
   </component>
